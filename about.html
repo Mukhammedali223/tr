@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TravelLite - Place Details</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top" role="navigation">
+    <div class="container">
+      <div class="avatar">
+        <img src="images/logo.png" alt="Site logo">
+      </div>
+      <a class="navbar-brand fw-bold" href="index.html">TravelLite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="tips.html">Travel Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center ms-3">
+        <button id="theme-toggle" class="btn btn-sm btn-outline-light me-2" aria-pressed="false" title="Toggle light / dark">🌙</button>
+        <button id="open-popup" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</button>
+      </div>
+    </div>
+        <button id="auth-btn" class="btn btn-sm btn-outline-light ms-2">Sign Up / Log In</button>
+
+    <span id="datetime" class="text-light ms-3 small" aria-hidden="true"></span>
+  </nav>
+
+  <main class="container site-layout">
+    <aside class="sidebar">
+      <h3>On this page</h3>
+      <ul>
+        <li><a href="#charyn">Charyn Canyon</a></li>
+        <li><a href="#burabay">Burabay</a></li>
+        <li><a href="#kolsai">Kolsai Lakes</a></li>
+      </ul>
+    </aside>
+
+    <section class="main-content">
+      <h1 class="page-title">Place Details</h1>
+
+      <section id="charyn" class="detail">
+        <h2>Charyn Canyon</h2>
+        <img data-src="images/charyn_canyon.jpg" src="images/placeholder-small.jpg" alt="Charyn Canyon" class="card-img">
+        <p>
+          Carved by the Charyn River over millions of years, Charyn Canyon stretches for dozens of kilometres and
+          shows dramatic red cliffs, narrow gorges and sculpted rock towers. The most famous part is the "Valley of
+          Castles" - a sequence of sandstone formations that glow at sunrise and sunset. Visitors come for short
+          hikes, scenic viewpoints, and unique landscape photography.
+        </p>
+        <p><strong>How to get there:</strong> about 3-hour drive from Almaty; guided day trips are common.</p>
+        <p><strong>Best time to visit:</strong> late spring and autumn for comfortable temperatures and clear skies.</p>
+        <p><a class="btn" href="places.html">Back to list</a></p>
+      </section>
+
+      <hr>
+
+      <section id="burabay" class="detail">
+        <h2>Burabay (Borovoe)</h2>
+        <img data-src="images/borovoe.jpeg" src="images/placeholder-small.jpg" alt="Burabay / Borovoe" class="card-img">
+        <p>
+          Burabay National Park, often called Borovoe, is a popular escape with emerald lakes surrounded by pine forests
+          and interesting rock islands rising from the water. The area offers gentle hiking trails, boat rides, picnic
+          spots and small guesthouses.
+        </p>
+        <p><strong>How to get there:</strong> around 3–4 hours by car from Nur-Sultan (Astana) or shorter from local towns; there are seasonal trains and buses.</p>
+        <p><strong>Best time to visit:</strong> late spring to early autumn for boating and clear weather.</p>
+        <p><a class="btn" href="places.html">Back to list</a></p>
+      </section>
+
+      <hr>
+
+      <section id="kolsai" class="detail">
+        <h2>Kolsai Lakes</h2>
+        <img data-src="images/kolsai.jpeg" src="images/placeholder-small.jpg" alt="Kolsai Lakes" class="card-img">
+        <p>
+          The Kolsai Lakes are a chain of three alpine lakes high in the Tian Shan mountains. Each lake is set in a
+          forested valley with crystal-clear water and dramatic mountain views. The area is excellent for multiday
+          hikes, camping and photography - the second lake is a popular overnight spot for hikers, with local guides
+          and yurts available in the valley.
+        </p>
+        <p><strong>How to get there:</strong> drive from the town of Saty (then hike or use local transport); moderate hiking skills recommended.</p>
+        <p><strong>Best time to visit:</strong> summer and early autumn, when trails are clear and wildflowers bloom.</p>
+        <p><a class="btn" href="places.html">Back to list</a></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Team: Mukhammedali Khassenov, Shakarim Ainatayev, Kuanysh Seitzhan</p>
+  </footer>
+
+  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <form id="subscribe-form" class="needs-validation" novalidate>
+          <div class="modal-header">
+            <h5 class="modal-title" id="subscribeModalLabel">Subscribe</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="subscribe-email" class="form-label">Email address</label>
+            <input id="subscribe-email" name="email" type="email" class="form-control" placeholder="you@example.com" required aria-required="true" />
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  
